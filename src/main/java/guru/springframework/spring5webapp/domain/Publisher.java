@@ -12,13 +12,26 @@ public class Publisher {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String addressLine1, city, state, zip;
+    private String name, addressLine1, city, state, zip;
 
-    public Publisher(String addressLine1, String city, String state, String zip) {
+    public Publisher() {
+
+    }
+
+    public Publisher(String name, String addressLine1, String city, String state, String zip) {
+        this.name = name;
         this.addressLine1 = addressLine1;
         this.city = city;
         this.state = state;
         this.zip = zip;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddressLine1() {
